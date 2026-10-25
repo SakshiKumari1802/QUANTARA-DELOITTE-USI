@@ -1,0 +1,113 @@
+[2025-12-16 19:02:22] [ml_module.main] [INFO] [analyze_routes:89] ================================================================================
+[2025-12-16 19:02:22] [ml_module.main] [INFO] [analyze_routes:90] STARTING COMPREHENSIVE ROUTE ANALYSIS
+[2025-12-16 19:02:22] [ml_module.main] [INFO] [analyze_routes:91] ================================================================================
+[2025-12-16 19:02:22] [ml_module.main] [INFO] [analyze_routes:92] Origin: Mumbai
+[2025-12-16 19:02:22] [ml_module.main] [INFO] [analyze_routes:93] Destination: Bangalore
+[2025-12-16 19:02:22] [ml_module.main] [INFO] [analyze_routes:94] User priorities: {'time': 0.25, 'distance': 0.25, 'carbon_emission': 0.25, 'road_quality': 0.25}
+[2025-12-16 19:02:22] [ml_module.main] [INFO] [analyze_routes:95] Max alternatives: 3
+[2025-12-16 19:02:22] [ml_module.main] [INFO] [analyze_routes:109] 
+============================================================
+[2025-12-16 19:02:22] [ml_module.main] [INFO] [analyze_routes:110] STEP 1: FETCHING ROUTES
+[2025-12-16 19:02:22] [ml_module.main] [INFO] [analyze_routes:111] ============================================================
+[2025-12-16 19:02:22] [ml_module.main] [INFO] [_get_routes:231] Attempting Google Maps API...
+[2025-12-16 19:02:22] [ml_module.routes.google_maps_client] [INFO] [get_directions:72] Requesting directions from (19.054999, 72.8692035) to (12.9985954, 77.59200860232801)
+[2025-12-16 19:02:23] [ml_module.routes.google_maps_client] [INFO] [get_directions:87] Successfully retrieved 2 route(s)
+[2025-12-16 19:02:23] [ml_module.main] [INFO] [_get_routes:239] ✓ Google Maps returned 2 route(s)
+[2025-12-16 19:02:23] [ml_module.main] [INFO] [analyze_routes:124] ✓ Found 2 route(s)
+[2025-12-16 19:02:23] [ml_module.main] [INFO] [analyze_routes:132] 
+============================================================
+[2025-12-16 19:02:23] [ml_module.main] [INFO] [analyze_routes:133] STEP 2: RUNNING ANALYSES
+[2025-12-16 19:02:23] [ml_module.main] [INFO] [analyze_routes:134] ============================================================
+[2025-12-16 19:02:23] [ml_module.main] [INFO] [analyze_routes:137] 
+→ TIME ANALYSIS
+[2025-12-16 19:02:23] [ml_module.analysis.time] [INFO] [analyze:42] ============================================================
+[2025-12-16 19:02:23] [ml_module.analysis.time] [INFO] [analyze:43] TIME ANALYSIS STARTED
+[2025-12-16 19:02:23] [ml_module.analysis.time] [INFO] [analyze:44] Processing 2 routes
+[2025-12-16 19:02:23] [ml_module.analysis.time] [INFO] [analyze:61] Duration range: min=67533s (18h 45m), max=68180s (18h 56m)
+[2025-12-16 19:02:23] [ml_module.analysis.time] [INFO] [analyze:89] Route 'Route 1': duration=67533s (18h 45m), score=1.0000
+[2025-12-16 19:02:23] [ml_module.analysis.time] [INFO] [analyze:89] Route 'Route 2': duration=68180s (18h 56m), score=0.0000
+[2025-12-16 19:02:23] [ml_module.analysis.time] [INFO] [analyze:92] TIME ANALYSIS COMPLETE
+[2025-12-16 19:02:23] [ml_module.analysis.time] [INFO] [analyze:93] ============================================================
+[2025-12-16 19:02:23] [ml_module.main] [INFO] [analyze_routes:142] 
+→ DISTANCE ANALYSIS
+[2025-12-16 19:02:23] [ml_module.analysis.distance] [INFO] [analyze:43] ============================================================
+[2025-12-16 19:02:23] [ml_module.analysis.distance] [INFO] [analyze:44] DISTANCE ANALYSIS STARTED
+[2025-12-16 19:02:23] [ml_module.analysis.distance] [INFO] [analyze:45] Processing 2 routes
+[2025-12-16 19:02:23] [ml_module.analysis.distance] [INFO] [analyze:63] Distance range: min=1005243m (1005.24km), max=1020301m (1020.30km)
+[2025-12-16 19:02:23] [ml_module.analysis.distance] [INFO] [analyze:93] Route 'Route 1': distance=1005243m (1005.24km), score=1.0000
+[2025-12-16 19:02:23] [ml_module.analysis.distance] [INFO] [analyze:93] Route 'Route 2': distance=1020301m (1020.30km), score=0.0000
+[2025-12-16 19:02:23] [ml_module.analysis.distance] [INFO] [analyze:96] DISTANCE ANALYSIS COMPLETE
+[2025-12-16 19:02:23] [ml_module.analysis.distance] [INFO] [analyze:97] ============================================================
+[2025-12-16 19:02:23] [ml_module.main] [INFO] [analyze_routes:147] 
+→ ROAD & WEATHER ANALYSIS
+[2025-12-16 19:02:23] [ml_module.analysis.road] [INFO] [analyze:91] ============================================================
+[2025-12-16 19:02:23] [ml_module.analysis.road] [INFO] [analyze:92] ROAD ANALYSIS STARTED
+[2025-12-16 19:02:23] [ml_module.analysis.road] [INFO] [analyze:93] Processing 2 routes
+[2025-12-16 19:02:23] [ml_module.analysis.road] [INFO] [analyze:103] Analyzing route: Route 1
+[2025-12-16 19:16:41] [ml_module.analysis.road] [INFO] [analyze:126] Route 'Route 1': road_quality_score=0.5065, avg_weather_risk=0.1207
+[2025-12-16 19:16:41] [ml_module.analysis.road] [INFO] [analyze:103] Analyzing route: Route 2
+[2025-12-16 19:21:04] [ml_module.analysis.road] [INFO] [analyze:126] Route 'Route 2': road_quality_score=0.5260, avg_weather_risk=0.1160
+[2025-12-16 19:21:04] [ml_module.analysis.road] [INFO] [analyze:129] ROAD ANALYSIS COMPLETE
+[2025-12-16 19:21:04] [ml_module.analysis.road] [INFO] [analyze:130] ============================================================
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [analyze_routes:152] 
+→ CARBON EMISSION ANALYSIS
+[2025-12-16 19:21:04] [ml_module.analysis.carbon] [INFO] [analyze:52] ============================================================
+[2025-12-16 19:21:04] [ml_module.analysis.carbon] [INFO] [analyze:53] CARBON EMISSION ANALYSIS STARTED
+[2025-12-16 19:21:04] [ml_module.analysis.carbon] [INFO] [analyze:54] Processing 2 routes
+[2025-12-16 19:21:04] [ml_module.analysis.carbon] [INFO] [analyze:91] Carbon emission range: min=965.03kg, max=979.49kg
+[2025-12-16 19:21:04] [ml_module.analysis.carbon] [INFO] [analyze:128] Route 'Route 1': carbon=965.03kg CO2 (0.960kg/km), score=1.0000
+[2025-12-16 19:21:04] [ml_module.analysis.carbon] [INFO] [analyze:128] Route 'Route 2': carbon=979.49kg CO2 (0.960kg/km), score=0.0000
+[2025-12-16 19:21:04] [ml_module.analysis.carbon] [INFO] [analyze:131] CARBON EMISSION ANALYSIS COMPLETE
+[2025-12-16 19:21:04] [ml_module.analysis.carbon] [INFO] [analyze:132] ============================================================
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [analyze_routes:156] 
+✓ All analyses complete
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [analyze_routes:159] 
+============================================================
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [analyze_routes:160] STEP 3: CALCULATING RESILIENCE SCORES
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [analyze_routes:161] ============================================================
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:51] ============================================================
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:52] RESILIENCE CALCULATION STARTED
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:53] Processing 2 routes
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:54] User priorities: {'time': 0.25, 'distance': 0.25, 'carbon_emission': 0.25, 'road_quality': 0.25}
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:127] Route 'Route 1':
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:128]   Component scores: time=1.0000, distance=1.0000, carbon=1.0000, road=0.5065
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:130]   Weighted contributions: time=0.2500, distance=0.2500, carbon=0.2500, road=0.1266
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:133]   Overall resilience score: 87.66/100
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:127] Route 'Route 2':
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:128]   Component scores: time=0.0000, distance=0.0000, carbon=0.0000, road=0.5260
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:130]   Weighted contributions: time=0.0000, distance=0.0000, carbon=0.0000, road=0.1315
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:133]   Overall resilience score: 13.15/100
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:139] Route ranking by resilience score:
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:141]   1. Route 1: 87.66
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:141]   2. Route 2: 13.15
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:143] RESILIENCE CALCULATION COMPLETE
+[2025-12-16 19:21:04] [ml_module.scoring.resilience] [INFO] [calculate:144] ============================================================
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [analyze_routes:174] 
+============================================================
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [analyze_routes:175] STEP 4: COMBINING RESULTS
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [analyze_routes:176] ============================================================
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [_combine_results:342] ✓ Combined data for 2 routes
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [analyze_routes:197] ================================================================================
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [analyze_routes:198] COMPREHENSIVE ROUTE ANALYSIS COMPLETE
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [analyze_routes:199] ✓ Analyzed 2 routes
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [analyze_routes:200] ✓ Best route: Route 1
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [analyze_routes:201] ✓ Reason: Best route due to: excellent time efficiency, shortest distance, lowest carbon emissions
+[2025-12-16 19:21:04] [ml_module.main] [INFO] [analyze_routes:202] ================================================================================
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [run_analysis:97] 
+✓ Analysis completed successfully
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [run_analysis:98] ✓ Number of routes found: 2
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [run_analysis:103] ✓ Best route: Route 1
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [run_analysis:105] 
+Route Rankings:
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [run_analysis:113]   1. Route 1: Score = 87.66/100
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [run_analysis:113]   2. Route 2: Score = 13.15/100
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [run_analysis:115] ================================================================================
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [run_analysis:116] ROUTE ANALYSIS ENTRY POINT COMPLETE
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [run_analysis:117] ================================================================================
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [<module>:178] 
+Outputting JSON result to stdout...
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [<module>:180] Output size: 346433 bytes
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [<module>:185] ✓ JSON output sent successfully to stdout
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [<module>:187] ================================================================================
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [<module>:188] ML MODULE COMPLETED SUCCESSFULLY
+[2025-12-16 19:21:04] [ml_module.run_analysis] [INFO] [<module>:189] ================================================================================

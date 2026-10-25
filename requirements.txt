@@ -1,0 +1,35 @@
+# Core dependencies
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# Google APIs
+google-generativeai>=0.8.0
+googlemaps>=4.10.0
+
+# Route analysis
+openrouteservice>=2.3.0
+
+# Weather API (Open-Meteo - no key needed, but requests required)
+# Already covered by requests
+
+# Road network analysis
+osmnx>=2.0.0
+networkx>=3.0
+geopandas>=1.0.0
+scikit-learn>=1.0.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Web scraping and NLP
+beautifulsoup4>=4.12.0
+transformers>=4.30.0
+torch>=2.0.0  # Required for transformers
+
+# Visualization (optional)
+folium>=0.20.0
+
+# Logging (built-in, but ensure proper version)
+# Python logging is built-in
+

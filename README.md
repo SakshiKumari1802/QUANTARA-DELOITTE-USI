@@ -344,9 +344,7 @@ Routes are classified based on resilience score (0-100):
 
 MIT License - See LICENSE file for details
 
-## 👥 Contributors
 
-- Bhanu Agrawal - Initial development
 
 ## 🔮 Future Enhancements
 
